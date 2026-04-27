@@ -1,31 +1,27 @@
-import java.util.*;
+import java.util.*; 
+import java.util.Scanner;
 import java.io.*;
 
 public class SudokuEngine {
-   public static void main(String[] args) {
-      String fileName = "data1.sdk";
-      SudokuBoard board = new SudokuBoard(fileName);
-      board.isSolved();
-      board.isValid();  
-      System.out.println(board); 
+
+   public static void main(String[] args) throws FileNotFoundException {
+      
+      SudokuBoard s = new SudokuBoard("data1.sdk"); 
+      System.out.println(s);
    }
 }
 
 /*
-# PROGRAM OUTPUT
+# Program Output 
 
- +-------+-------+-------+
- | 2 - - | 1 - 5 | - - 3 |
- | - 5 4 | - - - | 7 1 - |
- | - 1 - | 2 - 3 | - 8 - |
- +-------+-------+-------+
- | 6 - 2 | 8 - 7 | 3 - 4 |
- | - - - | - - - | - - - |
- | 1 - 5 | 3 - 9 | 8 - 6 |
- +-------+-------+-------+
- | - 2 - | 7 - 1 | - 6 - |
- | - 8 1 | - - - | 2 4 - |
- | 7 - - | 4 - 2 | - - 1 |
- +-------+-------+-------+
+ 2..1.5..3
+ .54...71.
+ .1.2.3.8.
+ 6.28.73.4
+ .........
+ 1.53.98.6
+ .2.7.1.6.
+ .81...24.
+ 7..4.2..1
 
 */
